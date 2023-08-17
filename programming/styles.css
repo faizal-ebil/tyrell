@@ -1,0 +1,55 @@
+body{
+  margin:0;
+  padding:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-color:#f0f0f0;
+  background:lightgrey;
+}
+
+body.overflow{
+  height:100vh;
+  overflow:hidden;
+}
+
+.page{
+  align-items:center;
+  display:flex;
+  flex-direction:column;
+  transition:transform 1s, opacity 1s;
+  padding:20px;
+}
+
+.page .container{
+  border-radius:5px;
+  background:white;
+}
+
+.page.intro{
+  width:500px;
+  transform:scale(0);
+  opacity:1;
+  transition:transform 1s, opacity 1s;
+}
+
+.page.form{
+  transform:scale(0.1); /* Start with a smaller scale */
+  transition:transform 1s, opacity 1s;
+}
+
+.page.result{
+  width:100%;
+  transform:scale(0.1); /* Start with a smaller scale */
+  transition:transform 1s, opacity 1s;
+}
+
+.zoom-out{
+  transform:scale(0.1) !important;
+  opacity:0 !important;
+}
+
+.zoom-in{
+  transform:scale(1) !important;
+  opacity:1 !important;
+}
